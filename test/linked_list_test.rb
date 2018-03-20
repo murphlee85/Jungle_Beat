@@ -14,12 +14,33 @@ class LinkedListExistsTest < Minitest::Test
   def test_list_head
     list = LinkedList.new
 
-    assert_equal nil, list.head
+    assert_nil nil, list.head
   end
 
-  def test_list_append("doop")
+  def test_append
     list = LinkedList.new
+    list.append("doop")
+    assert_equal "doop", list.head.data
+  end
 
-    assert_equal = "doop", list.append
+  def test_head_next_node
+    list = LinkedList.new
+    list.append("doop")
+
+    assert_nil list.head.next_node
+  end
+
+  def test_list_count
+    list = LinkedList.new
+    list.append("doop")
+
+    assert_equal 1, list.count
+  end
+
+  def test_list_to_string
+    list = LinkedList.new
+    list.append("doop")
+
+    assert_equal "doop", list.to_string
   end
 end
