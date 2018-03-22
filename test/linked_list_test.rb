@@ -54,15 +54,17 @@ class LinkedListExistsTest < Minitest::Test
     assert_nil list.head.next_node
   end
 
-  # def test_list_count_2
-  #   list = LinkedList.new
-  #
-  #   assert_equal 2, list.count
-  # end
+  def test_list_count_2
+    list = LinkedList.new
+    list.append("deep")
+    list.append("doop")
 
-  # def test_list_to_string_2
-  #   list = LinkedList.new
-  #
-  #   assert_equal "doop deep", list.to_string
-  # end
+    assert_equal 2, list.count
+  end
+
+  def test_list_to_string_2
+    list = LinkedList.new
+
+    assert_equal "doop deep", list.to_string
+  end
 end
