@@ -10,7 +10,7 @@ class NodeTest < Minitest::Test
     assert_instance_of Node, node
   end
 
-  def test_if_data_works
+  def test_if_sound_works
     node = Node.new ("plop")
 
     assert_equal "plop", node.data
@@ -19,6 +19,6 @@ class NodeTest < Minitest::Test
   def test_next_node_nil
     node = Node.new(nil)
 
-    assert_nil nil, node.next_node
+    assert_nil node.next_node
   end
 end
